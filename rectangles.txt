@@ -1,0 +1,65 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp3
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int size = int.Parse(Console.ReadLine()); 
+
+            for (int j = 1; j <= size; j++)
+            {
+                for (int k = j; k > 0; k--)
+                {
+                    Console.Write("#");
+                }
+                Console.WriteLine();
+            }       
+            Console.WriteLine();
+            Console.WriteLine();
+            for (int j = size; j > 0; j--)
+            {
+                for (int k = j; k > 0; k--)
+                {
+                    Console.Write("#");
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine();
+            Console.WriteLine();
+            for (int j = size,l=1; j > 0; j--,l++)
+            {
+                for (int k = j-1; k > 0; k--)
+                {
+                    Console.Write(" ");
+                }
+                for (int i = 0; i < l; i++)
+                {
+                    Console.Write("#");
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine();
+            Console.WriteLine();
+            for (int j = size,s = 1; j > 0&& s <= size; j--,s++)
+            {
+                for (int i = 1; i < s && s!=1; i++)
+                {
+                    Console.Write(" ");
+                }
+                for (int k = j; k > 0; k--)
+                {
+                    Console.Write("#");
+                }
+                
+                Console.WriteLine();
+            }
+
+        }
+    }
+}
